@@ -1,25 +1,25 @@
-import { useContext, useState } from 'react';
-import NumberFormat from 'react-number-format';
-import { DrawerContext } from 'contexts/drawer/drawer.provider';
-import { Scrollbar } from 'components/scrollbar';
-import ArrowLeft from 'assets/icons/arrow-left';
-import Input from 'components/input';
-import Button from 'components/button';
-import { useCart } from 'contexts/cart/cart.provider';
-import Textarea from 'components/textarea';
-import OrderSubmit from './order-submit';
+import { useContext, useState } from "react";
+import NumberFormat from "react-number-format";
+import { DrawerContext } from "contexts/drawer/drawer.provider";
+import { Scrollbar } from "components/scrollbar";
+import ArrowLeft from "assets/icons/arrow-left";
+import Input from "components/input";
+import Button from "components/button";
+import { useCart } from "contexts/cart/cart.provider";
+import Textarea from "components/textarea";
+import OrderSubmit from "./order-submit";
 import {
   InputBase,
   TextBoxCommonBase,
   TextBoxEnable,
-} from 'components/utils/theme';
+} from "components/utils/theme";
 const initialState = {
-  phone_number: '',
-  name: '',
-  email: '',
-  address: '',
-  postal_code: '',
-  suite: '',
+  phone_number: "",
+  name: "",
+  email: "",
+  address: "",
+  postal_code: "",
+  suite: "",
 };
 
 export default function Checkout() {
@@ -32,7 +32,7 @@ export default function Checkout() {
 
   const hideCheckout = () => {
     dispatch({
-      type: 'TOGGLE_CHECKOUT_VIEW',
+      type: "TOGGLE_CHECKOUT_VIEW",
       payload: {
         showCheckout: false,
       },
@@ -43,18 +43,18 @@ export default function Checkout() {
     const { name, email, address, postal_code, suite, phone_number } = formData;
     if (!phone_number.trim()) {
       setError({
-        field: 'phone_number',
-        message: 'Phone number is required',
+        field: "phone_number",
+        message: "Phone number is required",
       });
       return;
     }
 
     setLoading(true);
 
-    const res = await fetch('/api/order', {
-      method: 'POST',
+    const res = await fetch("/api/order", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         items: items,
@@ -116,7 +116,7 @@ export default function Checkout() {
                 })
               }
             />
-            {error?.field === 'phone_number' && (
+            {error?.field === "phone_number" && (
               <p className="text-12px font-semibold text-error pt-10px pl-15px">
                 {error.message}
               </p>
@@ -153,14 +153,14 @@ export default function Checkout() {
             <div className="flex items-center mb-10px">
               <Input
                 placeholder="Postal Code"
-                style={{ width: 'calc(50% - 5px)', marginRight: '5px' }}
+                style={{ width: "calc(50% - 5px)", marginRight: "5px" }}
                 name="postal_code"
                 value={formData.postal_code}
                 onChange={onChange}
               />
               <Input
                 placeholder="Apartment, Suite, etc."
-                style={{ width: 'calc(50% - 5px)', marginLeft: '5px' }}
+                style={{ width: "calc(50% - 5px)", marginLeft: "5px" }}
                 name="suite"
                 value={formData.suite}
                 onChange={onChange}

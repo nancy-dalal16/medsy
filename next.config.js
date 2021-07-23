@@ -20,6 +20,7 @@ const nextConfig = {
       "s3.amazonaws.com",
       "scontent.cdninstagram.com",
       "images-na.ssl-images-amazon.com",
+      "m.media-amazon.com",
     ],
   },
 };
