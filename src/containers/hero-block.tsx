@@ -1,11 +1,12 @@
-import React, { useContext, useCallback, useRef, useEffect } from 'react';
-import { Waypoint } from 'react-waypoint';
-import Search from 'components/search';
-import HeroBannerImg from 'assets/image/hero-banner-img.jpg';
-import { StickyContext } from 'contexts/sticky/sticky.provider';
-import { useMedia } from 'helpers/use-media';
+import React, { useContext, useCallback, useRef, useEffect } from "react";
+import { Waypoint } from "react-waypoint";
+import Search from "components/search";
+// import HeroBannerImg from 'assets/image/hero-banner-img.jpg';
+import HeroBannerImg from "assets/image/Hero-Banner.jpg";
+import { StickyContext } from "contexts/sticky/sticky.provider";
+import { useMedia } from "helpers/use-media";
 export default function HeroBlock() {
-  const isLargeScreen = useMedia('(min-width: 1024px)');
+  const isLargeScreen = useMedia("(min-width: 1024px)");
 
   const {
     state: { isSticky },
@@ -17,16 +18,18 @@ export default function HeroBlock() {
       searchRef.current.focus();
     }
   }, [isSticky, isLargeScreen]);
-  const setSticky = useCallback(() => dispatch({ type: 'SET_STICKY' }), [
-    dispatch,
-  ]);
+  const setSticky = useCallback(
+    () => dispatch({ type: "SET_STICKY" }),
+    [dispatch]
+  );
 
-  const removeSticky = useCallback(() => dispatch({ type: 'REMOVE_STICKY' }), [
-    dispatch,
-  ]);
+  const removeSticky = useCallback(
+    () => dispatch({ type: "REMOVE_STICKY" }),
+    [dispatch]
+  );
 
   const onWaypointPositionChange = ({ currentPosition }) => {
-    if (!currentPosition || currentPosition === 'above') {
+    if (!currentPosition || currentPosition === "above") {
       setSticky();
     }
   };
@@ -39,13 +42,19 @@ export default function HeroBlock() {
         className="w-full h-full hidden md:flex absolute top-0 left-0 object-cover"
       />
       <div className="flex flex-col relative z-10 justify-center items-center w-full max-w-720px">
-        <h1 className="font-normal font-30px text-gray-900 text-center mb-4">
+        <h1
+          style={{ color: "white" }}
+          className="font-normal font-30px text-gray-900 text-center mb-4"
+        >
           <span className="font-bold">Medsy</span> Provides You
           <span className="font-bold block">Safe Delivery</span>
         </h1>
 
-        <p className="font-17px text-gray-700 lg:mb-60px text-center leading-loose">
-          Get medicines at your home within 30 minutes.
+        <p
+          style={{ color: "white" }}
+          className="font-17px text-gray-700 lg:mb-60px text-center leading-loose"
+        >
+          Get mobile accessories at your home within 30 minutes.
         </p>
         {!isSticky && <Search ref={searchRef} className="hidden lg:flex" />}
         <Waypoint

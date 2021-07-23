@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-const isClient = typeof window === 'object';
+import { useEffect, useState } from "react";
+const isClient = typeof window === "object";
 
 export const useMedia = (query: string, defaultState: boolean = false) => {
   const [state, setState] = useState(

@@ -1,8 +1,8 @@
-import React from 'react';
-import Carousel from 'react-multi-carousel';
-import InstagramCard from 'components/instagram-card';
-import ChevronLeft from 'assets/icons/chevron-left';
-import ChevronRight from 'assets/icons/chevron-right';
+import React from "react";
+import Carousel from "react-multi-carousel";
+import InstagramCard from "components/instagram-card";
+import ChevronLeft from "assets/icons/chevron-left";
+import ChevronRight from "assets/icons/chevron-right";
 
 type NavButtonProps = {
   onClick: Function;
@@ -58,31 +58,31 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ next, previous }) => {
 const reviews = [
   {
     id: 1,
-    postUrl: 'https://www.instagram.com/p/CE1agh_h1us/',
+    postUrl: "https://www.instagram.com/p/CRBDLtDJBgy/",
   },
   {
     id: 2,
-    postUrl: 'https://www.instagram.com/p/CE1ae2ohVOq/',
+    postUrl: "https://www.instagram.com/p/CE1ae2ohVOq/",
   },
   {
     id: 3,
-    postUrl: 'https://www.instagram.com/p/CE1adJcB68O/',
+    postUrl: "https://www.instagram.com/p/CE1adJcB68O/",
   },
   {
     id: 4,
-    postUrl: 'https://www.instagram.com/p/CE1abO4htAH/',
+    postUrl: "https://www.instagram.com/p/CE1abO4htAH/",
   },
   {
     id: 5,
-    postUrl: 'https://www.instagram.com/p/CE1aZFQht-k/',
+    postUrl: "https://www.instagram.com/p/CE1aZFQht-k/",
   },
   {
     id: 6,
-    postUrl: 'https://www.instagram.com/p/CE1aXMyBajJ/',
+    postUrl: "https://www.instagram.com/p/CE1aXMyBajJ/",
   },
   {
     id: 7,
-    postUrl: 'https://www.instagram.com/p/CE1aUIpheRQ/',
+    postUrl: "https://www.instagram.com/p/CE1aUIpheRQ/",
   },
 ];
 
