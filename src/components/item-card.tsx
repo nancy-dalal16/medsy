@@ -1,6 +1,6 @@
-import React from 'react';
-import { CURRENCY } from 'helpers/constants';
-import CounterAlt from './animated-counter';
+import React from "react";
+import { CURRENCY } from "helpers/constants";
+import CounterAlt from "./animated-counter";
 import {
   ItemCardBase,
   ItemCardBaseContent,
@@ -14,8 +14,8 @@ import {
   ItemCardQuantity,
   ItemCardDetailsButton,
   ItemCardCounterWrapper,
-} from './utils/theme';
-import Image from 'next/image';
+} from "./utils/theme";
+import Image from "next/image";
 
 interface ItemProps {
   image: string;
@@ -40,7 +40,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
   onIncrement,
   value,
 }) => {
-  const baseClassName = ItemCardBase + ' ' + (value ? 'shadow-cart' : '');
+  const baseClassName = ItemCardBase + " " + (value ? "shadow-cart" : "");
   return (
     <div className={baseClassName}>
       <div className={ItemCardBaseContent}>
@@ -48,7 +48,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
           <Image
             className="object-cover"
             src={item?.image}
-            alt={' Alt ' + item?.name}
+            alt={" Alt " + item?.name}
             width={138}
             height={138}
             // unoptimized

@@ -16,7 +16,11 @@ const withOptimizedImages = require("next-optimized-images");
 const nextConfig = {
   images: {
     // sizes: [320, 480, 820, 1200, 1600],
-    domains: ["s3.amazonaws.com", "scontent.cdninstagram.com", "4.imimg.com"],
+    domains: [
+      "s3.amazonaws.com",
+      "scontent.cdninstagram.com",
+      "images-na.ssl-images-amazon.com",
+    ],
   },
 };
 

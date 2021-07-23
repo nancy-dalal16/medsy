@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import ItemCard from 'components/item-card';
-import { DrawerContext } from 'contexts/drawer/drawer.provider';
-import { useCart } from 'contexts/cart/cart.provider';
-import { useSearch } from 'contexts/search/use-search';
-import { useSearchable } from 'helpers/use-searchable';
-import NotFound from 'assets/icons/not-found';
+import React, { useContext } from "react";
+import ItemCard from "components/item-card";
+import { DrawerContext } from "contexts/drawer/drawer.provider";
+import { useCart } from "contexts/cart/cart.provider";
+import { useSearch } from "contexts/search/use-search";
+import { useSearchable } from "helpers/use-searchable";
+import NotFound from "assets/icons/not-found";
 
 const Products = React.forwardRef(
   ({ items }: any, ref: React.RefObject<HTMLDivElement>) => {
@@ -19,21 +19,21 @@ const Products = React.forwardRef(
 
     const showDetails = (item) => {
       dispatch({
-        type: 'STORE_PRODUCT_DETAIL',
+        type: "STORE_PRODUCT_DETAIL",
         payload: {
           item: item,
         },
       });
 
       dispatch({
-        type: 'SLIDE_CART',
+        type: "SLIDE_CART",
         payload: {
           open: true,
         },
       });
 
       dispatch({
-        type: 'TOGGLE_PRODUCT_DETAIL',
+        type: "TOGGLE_PRODUCT_DETAIL",
         payload: {
           showDetails: true,
         },

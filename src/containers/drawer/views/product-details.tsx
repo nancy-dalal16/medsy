@@ -1,11 +1,11 @@
-import React, { useState, useContext } from 'react';
-import { Scrollbar } from 'components/scrollbar';
-import Button from 'components/button';
-import { CURRENCY } from 'helpers/constants';
-import { useCart } from 'contexts/cart/cart.provider';
-import { DrawerContext } from 'contexts/drawer/drawer.provider';
-import ArrowLeft from 'assets/icons/arrow-left';
-import Counter from 'components/counter';
+import React, { useState, useContext } from "react";
+import { Scrollbar } from "components/scrollbar";
+import Button from "components/button";
+import { CURRENCY } from "helpers/constants";
+import { useCart } from "contexts/cart/cart.provider";
+import { DrawerContext } from "contexts/drawer/drawer.provider";
+import ArrowLeft from "assets/icons/arrow-left";
+import Counter from "components/counter";
 
 export default function ProductDetails() {
   const [visibility, setVisibility] = useState(false);
@@ -20,14 +20,14 @@ export default function ProductDetails() {
 
   const hideDetails = () => {
     dispatch({
-      type: 'TOGGLE_PRODUCT_DETAIL',
+      type: "TOGGLE_PRODUCT_DETAIL",
       payload: {
         showDetails: false,
       },
     });
 
     dispatch({
-      type: 'SLIDE_CART',
+      type: "SLIDE_CART",
       payload: {
         open: false,
       },
@@ -37,7 +37,7 @@ export default function ProductDetails() {
   const addToCart = () => {
     addItem(state.item);
     dispatch({
-      type: 'TOGGLE_CART_VIEW',
+      type: "TOGGLE_CART_VIEW",
       payload: {
         showCart: true,
       },
@@ -74,17 +74,17 @@ export default function ProductDetails() {
               <span className=" text-gray-500 text-11px capitalize">
                 {state.item.type}
               </span>
-              <span className="flex bg-gray-500 w-3px h-3px rounded mx-3" />
+              {/* <span className="flex bg-gray-500 w-3px h-3px rounded mx-3" />
               <span className=" text-gray-500 text-11px">
-                {state.item.quantity}{' '}
-                {state.item.quantity > 1 ? 'pieces' : 'piece'}
-              </span>
+                {state.item.quantity}{" "}
+                {state.item.quantity > 1 ? "pieces" : "piece"}
+              </span> */}
             </p>
 
             {visibility === true ? (
               <p className="my-5">{state.item.description}</p>
             ) : (
-              ''
+              ""
             )}
 
             {state.item.description && (
@@ -93,39 +93,36 @@ export default function ProductDetails() {
                 onClick={toggleVisibility}
                 aria-label="details"
               >
-                {visibility === true ? 'Less Details' : 'More Details'}
+                {visibility === true ? "Less Details" : "More Details"}
               </button>
             )}
+          </div>
+          <div className="flex flex-col justify-start full mt-10 pr-30px even:pr-0">
+            <span className="text-gray-500 text-11px mb-2">Type</span>
+            <span className="font-normal text-13px text-gray-900 capitalize">
+              {state.item.type}
+            </span>
+          </div>
+
+          <div className="flex flex-col justify-start full mt-10 pr-30px even:pr-0">
+            <span className="text-gray-500 text-11px mb-2">Brand</span>
+            <span className="font-normal text-13px text-gray-900 capitalize">
+              {state.item.brand}
+            </span>
+          </div>
+
+          <div className="flex flex-col justify-start full mt-10 pr-30px even:pr-0">
+            <span className="text-gray-500 text-11px mb-2">Color</span>
+            <span className="font-normal text-13px text-gray-900 capitalize">
+              {state.item.color}
+            </span>
           </div>
 
           <div className="flex w-full flex-col">
             <div className="flex flex-col justify-start full mt-10 pr-30px even:pr-0">
-              <span className="text-gray-500 text-11px mb-2">Dosages Form</span>
+              <span className="text-gray-500 text-11px mb-2">Sold By</span>
               <span className="font-normal text-13px text-gray-900 capitalize">
-                {state.item.type}
-              </span>
-            </div>
-
-            <div className="flex flex-col justify-start full mt-10 pr-30px even:pr-0">
-              <span className="text-gray-500 text-11px mb-2">Dosages</span>
-              <span className="font-normal text-13px text-gray-900 capitalize">
-                {state.item.dosage}
-              </span>
-            </div>
-
-            <div className="flex flex-col justify-start full mt-10 pr-30px even:pr-0">
-              <span className="text-gray-500 text-11px mb-2">
-                Active Substance
-              </span>
-              <span className="font-normal text-13px text-gray-900 capitalize">
-                {state.item.substance}
-              </span>
-            </div>
-
-            <div className="flex flex-col justify-start full mt-10 pr-30px even:pr-0">
-              <span className="text-gray-500 text-11px mb-2">Manufacturer</span>
-              <span className="font-normal text-13px text-gray-900 capitalize">
-                {state.item.manufacturer}
+                {state.item.sold_by}
               </span>
             </div>
           </div>
