@@ -39,14 +39,14 @@ export default function HeroBlock() {
       <img
         src={HeroBannerImg}
         alt="hero-image"
-        className="w-full h-full hidden md:flex absolute top-0 left-0 object-cover"
+        className="w-full h-full  md:flex absolute top-0 left-0 object-cover"
       />
       <div className="flex flex-col relative z-10 justify-center items-center w-full max-w-720px">
         <h1
           style={{ color: "white" }}
           className="font-normal font-30px text-gray-900 text-center mb-4"
         >
-          <span className="font-bold">Medsy</span> Provides You
+          <span className="font-bold">Phoneclub</span> Provides You
           <span className="font-bold block">Safe Delivery</span>
         </h1>
 
@@ -54,7 +54,7 @@ export default function HeroBlock() {
           style={{ color: "white" }}
           className="font-17px text-gray-700 lg:mb-60px text-center leading-loose"
         >
-          Get mobile accessories at your home within 30 minutes.
+          Get mobile accessories at your home.
         </p>
         {!isSticky && <Search ref={searchRef} className="hidden lg:flex" />}
         <Waypoint

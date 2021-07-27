@@ -8,6 +8,7 @@ import Button from "components/button";
 import { useCart } from "contexts/cart/cart.provider";
 import Textarea from "components/textarea";
 import OrderSubmit from "./order-submit";
+import axios from "axios";
 import {
   InputBase,
   TextBoxCommonBase,
@@ -64,6 +65,9 @@ export default function Checkout() {
         bill_amount: calculatePrice(),
       }),
     });
+
+    console.log(process.env.GOOGLE_SPREADSHEET_ID_PRODUCT);
+
     if (res.status === 200) {
       setSuccess(true);
       clearCart();
@@ -83,7 +87,6 @@ export default function Checkout() {
   if (success) {
     return <OrderSubmit />;
   }
-
   return (
     <div className="flex flex-col w-full h-full">
       <div className="w-full flex justify-center relative px-30px py-20px">
@@ -148,7 +151,7 @@ export default function Checkout() {
               name="address"
               value={formData.address}
               onChange={onChange}
-            />
+            ></Textarea>
 
             <div className="flex items-center mb-10px">
               <Input
