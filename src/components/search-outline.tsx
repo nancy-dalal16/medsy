@@ -1,11 +1,11 @@
-import React from 'react';
-import SearchIcon from 'assets/icons/search-icon';
-import { useSearch } from 'contexts/search/use-search';
+import React from "react";
+import SearchIcon from "assets/icons/search-icon";
+import { useSearch } from "contexts/search/use-search";
 import {
   SearchOutlineBase,
   SearchOutlineIconWrapper,
   SearchOutlineInput,
-} from './utils/theme';
+} from "./utils/theme";
 
 type SearchOutlineProps = {
   className?: string;
@@ -23,21 +23,21 @@ const SearchOutline = React.forwardRef<HTMLInputElement, SearchOutlineProps>(
     };
     const onSubmit = (e) => e.preventDefault();
 
-    const classNames = SearchOutlineBase + ' ' + className;
+    const classNames = SearchOutlineBase + " " + className;
 
     return (
       <form noValidate role="search" className={classNames} onSubmit={onSubmit}>
         <span className={SearchOutlineIconWrapper}>
           <SearchIcon color="#999999" />
         </span>
-        <label htmlFor={props.id || 'search-outline'} className="sr-only">
-          {props.id || 'search-outline'}
+        <label htmlFor={props.id || "search-outline"} className="sr-only">
+          {props.id || "search-outline"}
         </label>
         <input
           type="search"
-          placeholder="Search your medicine here"
+          placeholder="Search your products here"
           className={SearchOutlineInput}
-          id={props.id || 'search-outline'}
+          id={props.id || "search-outline"}
           value={searchTerm}
           onChange={onSearch}
           autoComplete="off"
