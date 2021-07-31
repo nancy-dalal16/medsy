@@ -1,6 +1,6 @@
 import { useContext, useRef, useEffect } from "react";
 import Link from "next/link";
-import PhoneIcon from "assets/icons/phone";
+import WhatsappIcon from "assets/icons/whatsapp-icon";
 import CartIcon from "assets/icons/cart-icon";
 import Logo from "assets/icons/logo";
 import Search from "components/search-outline";
@@ -82,10 +82,14 @@ export default function Header() {
       </div>
 
       <div className="hidden items-center text-gray-900 mr-10 flex-shrink-0 lg:flex">
-        <PhoneIcon />
-        <span className="font-semibold text-base text-14px ml-3">
-          +1 855-766-5885
-        </span>
+        <WhatsappIcon />
+        <Link href="https://api.whatsapp.com/send?phone=+911234567890&text=Hello">
+          <a>
+            <span className="font-semibold text-base text-14px ml-3">
+              +91 12345 67890
+            </span>
+          </a>
+        </Link>
       </div>
 
       <button

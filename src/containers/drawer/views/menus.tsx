@@ -17,26 +17,16 @@ import {
 const menus = [
   {
     id: 1,
-    pathname: "https://medsy-modern.vercel.app/",
-    title: "Medsy Modern",
+    pathname: "/",
+    title: "Home",
   },
   {
     id: 2,
-    pathname: "https://medsy-minimal.vercel.app/",
-    title: "Medsy Minimal",
-  },
-  {
-    id: 3,
-    pathname: "/",
-    title: "Medsy Classic",
-  },
-  {
-    id: 4,
     pathname: "/faq",
     title: "FAQ",
   },
   {
-    id: 5,
+    id: 3,
     pathname: "/terms",
     title: "Terms & Conditions",
   },

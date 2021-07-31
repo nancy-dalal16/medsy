@@ -66,7 +66,18 @@ export default function Checkout() {
       }),
     });
 
-    console.log(process.env.GOOGLE_SPREADSHEET_ID_PRODUCT);
+    // const res = await fetch(`/api/order`, {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     items: items,
+    //     address: `${name} ${address} ${postal_code} ${suite}`,
+    //     phone_number: phone_number,
+    //     email: email,
+    //     bill_amount: calculatePrice(),
+    //   }),
+    // });
 
     if (res.status === 200) {
       setSuccess(true);

@@ -8,11 +8,11 @@ async function createOrder(data) {
     )
   ) {
     throw new Error(
-      'GOOGLE credentials must be set as env vars `GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL` ,`GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY` and `GOOGLE_SPREADSHEET_ID_ORDER`.'
+      "GOOGLE credentials must be set as env vars `GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL` ,`GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY` and `GOOGLE_SPREADSHEET_ID_ORDER`."
     );
   }
 
-  const { GoogleSpreadsheet } = require('google-spreadsheet');
+  const { GoogleSpreadsheet } = require("google-spreadsheet");
   const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID_ORDER);
   await doc.useServiceAccountAuth({
     client_email: process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL,
@@ -26,7 +26,7 @@ async function createOrder(data) {
 }
 export default async (req, res) => {
   const { method } = req;
-  if (method === 'POST') {
+  if (method === "POST") {
     const { items, email, bill_amount, address, phone_number } = req.body;
     try {
       await createOrder({
@@ -47,7 +47,7 @@ export default async (req, res) => {
     }
     return res.status(200).json({ message: `successfully added new order` });
   } else {
-    res.setHeader('Allow', ['POST']);
+    res.setHeader("Allow", ["POST"]);
     return res.status(405).json({ message: `Method ${method} Not Allowed` });
   }
 };
