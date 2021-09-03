@@ -24,18 +24,18 @@ export default function Home({ products }) {
   return (
     <Layout>
       <Head>
+        <title>Phoneclub</title>
+        <link rel="manifest" href="/manifest.json" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <meta name="Description" content="Put your description here." />
-        <title>PHONECLUB</title>
       </Head>
 
       <HeroBlock />
       <HowItWorks />
       <Products items={products} ref={elRef} />
-      <InstagramReview />
+      {/* <InstagramReview /> */}
     </Layout>
   );
 }

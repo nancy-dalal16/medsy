@@ -5,6 +5,8 @@ import ActiveLink from "components/active-link";
 import { DrawerContext } from "contexts/drawer/drawer.provider";
 import CloseIcon from "assets/icons/close";
 import Logo from "assets/icons/logo";
+
+import LogoPic from "assets/image/phoneclub.png";
 import {
   Facebook,
   Twitter,
@@ -94,16 +96,17 @@ export default function DrawerMenu() {
         <div className="w-full h-90px bg-gray-100 flex justify-start items-center relative px-30px flex-shrink-0">
           <Link href="/">
             <a className="flex" onClick={hideMenu}>
-              <span className="sr-only">PHONECLUB</span>
+              {/* <span className="sr-only">USHA HANDICRAFTS</span> */}
               {/* <Logo width="100px" id="medsy-menu-logo" /> */}
-              <h1 className="rainbow">PHONECLUB</h1>
+              {/* <h1 className="rainbow">USHA HANDICRAFTS</h1> */}
+              <img src={LogoPic} alt="hero-image" width="300px" />
             </a>
           </Link>
 
           <div className="flex items-center justify-end ml-auto pl-30px pr-50px text-gray-700 flex-shrink-0 lg:hidden">
             {/* <PhoneIcon /> */}
             <span className="font-semibold text-base text-14px ml-3">
-              +1 855-766-5885
+              +91 1234567890
             </span>
           </div>
 

@@ -60,7 +60,7 @@ const Footer = () => (
         className="font-semibold transition-colors duration-200 ease-in-out hover:text-red-700"
         href="#"
       >
-        PHONECLUB.
+        Phoneclub.
       </a>{" "}
       All rights reserved
     </p>

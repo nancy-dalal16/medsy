@@ -1,10 +1,12 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 export default class extends Document {
   render() {
     return (
       <Html lang="en-US">
-        <Head />
+        <Head>
+          <link rel="manifest" href="/manifest.json" />{" "}
+        </Head>
         <body>
           <Main />
           <NextScript />
@@ -13,3 +15,6 @@ export default class extends Document {
     );
   }
 }
+`
+  
+`;

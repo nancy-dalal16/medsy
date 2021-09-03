@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
-import Head from 'next/head';
-import Layout from 'containers/layout/layout';
-import TermsPageContent from 'containers/term/terms';
+import { useEffect } from "react";
+import Head from "next/head";
+import Layout from "containers/layout/layout";
+import TermsPageContent from "containers/term/terms";
 
 export default function FAQ() {
   return (
-    <Layout style={{ height: 'auto' }}>
+    <Layout style={{ height: "auto" }}>
       <Head>
         <meta
           name="viewport"
@@ -13,6 +13,7 @@ export default function FAQ() {
         />
         <meta name="Description" content="Put your description here." />
         <title>Terms &amp; Condition</title>
+        <link rel="manifest" href="/manifest.json" />
       </Head>
 
       <div className="px-0">

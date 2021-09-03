@@ -278,7 +278,7 @@ button {
   display: flex;
 }
 
-.rainbow {
+/* .rainbow {
   background: linear-gradient(
     to right,
     #ef5350,
@@ -294,6 +294,12 @@ button {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+} */
+@media (min-width: 1024px) {
+  .lg\:mr-10 {
+    margin-right: 2.5rem;
+    width: 100%;
+  }
 }
 
 /* Tailwind Utils */

@@ -1,12 +1,14 @@
-// const isProd = process.env.NODE_ENV === "production";
+//const isProd = process.env.NODE_ENV === "production";
+const withPWA = require("next-pwa");
 
-// const withPWA = require("next-pwa");
-// module.exports = withPWA({
-//   pwa: {
-//     disable: !isProd,
-//     dest: "public",
-//   },
-// });
+module.exports = withPWA({
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+    disable: false,
+  },
+});
 
 const { withPlugins } = require("next-compose-plugins");
 const withOptimizedImages = require("next-optimized-images");
