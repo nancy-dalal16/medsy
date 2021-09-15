@@ -46,7 +46,7 @@ export default function HeroBlock() {
           style={{ color: "white" }}
           className="font-normal font-30px text-gray-900 text-center mb-4"
         >
-          <span className="font-bold">Phoneclub</span> Provides You
+          <span className="font-bold">Phoneclub </span> Provides
           <span className="font-bold block">Safe Delivery</span>
         </h1>
 
@@ -54,7 +54,7 @@ export default function HeroBlock() {
           style={{ color: "white" }}
           className="font-17px text-gray-700 lg:mb-60px text-center leading-loose"
         >
-          Get mobile accessories at your home.
+          Get mobile accessories at your door step.
         </p>
         {!isSticky && <Search ref={searchRef} className="hidden lg:flex" />}
         <Waypoint
