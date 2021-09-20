@@ -58,31 +58,31 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ next, previous }) => {
 const reviews = [
   {
     id: 1,
-    postUrl: "https://www.instagram.com/p/CRBDLtDJBgy/",
+    postUrl: "https://www.instagram.com/p/CNzU39UAG9H/",
   },
   {
     id: 2,
-    postUrl: "https://www.instagram.com/p/CE1ae2ohVOq/",
+    postUrl: "https://www.instagram.com/p/CMjT8A3grU3/",
   },
   {
     id: 3,
-    postUrl: "https://www.instagram.com/p/CE1adJcB68O/",
+    postUrl: "https://www.instagram.com/p/CMjT8A3grU3/",
   },
   {
     id: 4,
-    postUrl: "https://www.instagram.com/p/CE1abO4htAH/",
+    postUrl: "https://www.instagram.com/p/CMjT8A3grU3/",
   },
   {
     id: 5,
-    postUrl: "https://www.instagram.com/p/CE1aZFQht-k/",
+    postUrl: "https://www.instagram.com/p/CMjT8A3grU3/",
   },
   {
     id: 6,
-    postUrl: "https://www.instagram.com/p/CE1aXMyBajJ/",
+    postUrl: "https://www.instagram.com/p/CMjT8A3grU3/",
   },
   {
     id: 7,
-    postUrl: "https://www.instagram.com/p/CE1aUIpheRQ/",
+    postUrl: "https://www.instagram.com/p/CMjT8A3grU3/",
   },
 ];
 
